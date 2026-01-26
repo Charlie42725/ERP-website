@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import Typewriter from "./components/Typewriter";
 import ScrollAnimation from "./components/ScrollAnimation";
+import ParticleBackground from "./components/ParticleBackground";
 
 export default function Home() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
@@ -93,6 +94,7 @@ export default function Home() {
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/20 blur-[120px] rounded-full mix-blend-screen animate-pulse-slow"></div>
         <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-cyan-600/20 blur-[120px] rounded-full mix-blend-screen animate-pulse-slow delay-1000"></div>
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-20"></div>
+        <ParticleBackground />
       </div>
 
       {/* Glass Header (Global in layout) */}
@@ -213,29 +215,31 @@ export default function Home() {
 
             {/* Right: Hero Title & Branding */}
             <div className="flex-1 pt-10 text-center lg:text-left lg:pl-20">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 text-xs font-bold mb-8 backdrop-blur-md animate-in fade-in slide-in-from-bottom-4 duration-700">
-                <Zap size={12} className="text-yellow-400 fill-yellow-400" />
-                專為玩具店量身打造
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 text-xs font-bold mb-8 backdrop-blur-md animate-in fade-in slide-in-from-bottom-4 duration-700 neon-border-blue">
+                <Zap size={12} className="text-cyan-400 fill-cyan-400 animate-pulse" />
+                <span className="tracking-wider">專為玩具店量身打造</span>
               </div>
 
               <h1 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight tracking-tight min-h-[160px] md:min-h-[auto]">
-                <Typewriter text="告別庫存混亂" speed={150} />
+                <span className="text-glow-blue">
+                  <Typewriter text="告別庫存混亂" speed={150} />
+                </span>
                 <br className="hidden lg:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-glow-magenta">
                   <Typewriter text="隨時掌控生意" speed={150} startDelay={1500} />
                 </span>
               </h1>
 
-              <p className="text-xl text-slate-400 font-light mb-12 max-w-2xl mx-auto lg:mx-0 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
+              <p className="text-xl text-slate-300 font-light mb-12 max-w-2xl mx-auto lg:mx-0 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
                 專為玩具店量身打造的經營管理系統。
-                <span className="block mt-2 text-cyan-100 font-medium">簡單易用 · 功能完整 · 自動智慧</span>
+                <span className="block mt-2 text-cyan-200 font-medium text-glow-blue">簡單易用 · 功能完整 · 自動智慧</span>
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
-                <Link href="/consult" className="px-10 py-4 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-bold shadow-[0_0_20px_rgba(37,99,235,0.4)] transition-all hover:scale-105 flex items-center justify-center gap-2">
+                <Link href="/consult" className="btn-neon-primary px-10 py-4 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-bold flex items-center justify-center gap-2">
                   立即免費試用 <ChevronRight size={18} />
                 </Link>
-                <Link href="/pricing" className="px-10 py-4 rounded-full border border-white/20 hover:bg-white/10 text-white font-bold transition-all flex items-center justify-center">
+                <Link href="/pricing" className="px-10 py-4 rounded-full border border-white/20 hover:bg-white/5 text-white font-bold transition-all flex items-center justify-center hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_15px_rgba(34,211,238,0.1)]">
                   查看方案與價格
                 </Link>
               </div>
@@ -261,16 +265,16 @@ export default function Home() {
                   { title: "沒時間做報表", desc: "忙著賣貨，沒空計算今天的毛利和淨利。", icon: BarChart3, color: "text-purple-400" }
                 ].map((item, idx) => (
                   <ScrollAnimation key={idx} delay={idx * 150} className="h-full">
-                    <div className="p-6 rounded-2xl border border-white/5 bg-white/5 backdrop-blur-lg hover:border-white/10 transition-colors h-full">
-                      <item.icon size={32} className={`${item.color} mb-4`} />
-                      <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                      <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+                    <div className="p-6 rounded-2xl border border-white/5 bg-white/5 backdrop-blur-lg box-glow-hover neon-border-blue transition-all h-full group">
+                      <item.icon size={32} className={`${item.color} mb-4 group-hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]`} />
+                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">{item.title}</h3>
+                      <p className="text-slate-400 text-sm leading-relaxed group-hover:text-slate-200">{item.desc}</p>
                     </div>
                   </ScrollAnimation>
                 ))}
               </div>
               <div className="mt-8 text-center">
-                <div className="inline-block px-6 py-3 rounded-full bg-red-500/10 border border-red-500/20 text-red-300 text-sm font-medium">
+                <div className="inline-block px-6 py-3 rounded-full bg-red-500/10 border border-red-500/20 text-red-300 text-sm font-medium shadow-[0_0_15px_rgba(239,68,68,0.2)]">
                   💡 老闆重點：這些問題導致玩具店花太多時間在「找資料」而不是「做生意」。
                 </div>
               </div>
@@ -295,9 +299,9 @@ export default function Home() {
                       "收到一筆款項 → 帳戶餘額自動更新"
                     ].map((text, i) => (
                       <ScrollAnimation key={i} delay={i * 200}>
-                        <li className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/5">
-                          <CheckCircle2 className="text-cyan-400 shrink-0" />
-                          <span className="text-lg text-white">{text}</span>
+                        <li className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/5 hover:border-cyan-500/30 hover:bg-cyan-500/5 transition-all duration-300 hover:shadow-[0_0_15px_rgba(34,211,238,0.1)]">
+                          <CheckCircle2 className="text-cyan-400 shrink-0 drop-shadow-[0_0_5px_rgba(34,211,238,0.8)]" />
+                          <span className="text-lg text-white group-hover:text-cyan-100">{text}</span>
                         </li>
                       </ScrollAnimation>
                     ))}

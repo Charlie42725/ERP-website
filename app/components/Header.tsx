@@ -9,7 +9,7 @@ export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/50 backdrop-blur-xl supports-[backdrop-filter]:bg-black/20">
+        <header className="fixed top-0 z-50 w-full border-b border-cyan-500/20 bg-black/50 backdrop-blur-xl supports-[backdrop-filter]:bg-black/20 shadow-[0_2px_15px_rgba(34,211,238,0.1)]">
             <div className="mx-auto flex h-[72px] max-w-[1200px] items-center justify-between px-6">
                 <div className="flex items-center gap-4 lg:gap-12">
                     {/* Mobile Menu Button */}
