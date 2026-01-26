@@ -56,28 +56,28 @@ export default function ContactSales() {
                 </div>
 
                 {/* Right Sidebar (Form) */}
-                <div className="w-full lg:w-[480px] shrink-0 bg-blue-600 p-12 flex flex-col justify-center relative z-20 shadow-2xl">
+                <div className="w-full lg:w-[480px] shrink-0 bg-slate-900/60 backdrop-blur-2xl border-l border-white/10 p-12 flex flex-col justify-center relative z-20 shadow-2xl">
                     <div className="relative z-10">
                         <h2 className="text-3xl font-bold text-white mb-8 text-center">快速體驗申請</h2>
 
                         <form className="space-y-6">
                             <div className="space-y-2">
-                                <label className="text-blue-100 text-sm font-bold">E-mail</label>
-                                <input type="email" className="w-full h-12 rounded-lg px-4 bg-white/20 border border-white/30 text-white placeholder:text-blue-200 focus:outline-none focus:bg-white/30 focus:border-white transition-all" placeholder="請輸入您的 Email" />
+                                <label className="text-slate-300 text-sm font-bold">E-mail</label>
+                                <input type="email" className="w-full h-12 rounded-lg px-4 bg-white/5 border border-white/10 text-white placeholder:text-slate-500 focus:outline-none focus:bg-white/10 focus:border-cyan-500 transition-all" placeholder="請輸入您的 Email" />
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-blue-100 text-sm font-bold">語言</label>
+                                <label className="text-slate-300 text-sm font-bold">語言</label>
                                 <div className="relative">
-                                    <select className="w-full h-12 rounded-lg px-4 bg-white/20 border border-white/30 text-white focus:outline-none focus:bg-white/30 appearance-none cursor-pointer">
-                                        <option className="bg-blue-900">繁體中文</option>
-                                        <option className="bg-blue-900">English</option>
+                                    <select className="w-full h-12 rounded-lg px-4 bg-white/5 border border-white/10 text-white focus:outline-none focus:bg-white/10 focus:border-cyan-500 appearance-none cursor-pointer">
+                                        <option className="bg-slate-900">繁體中文</option>
+                                        <option className="bg-slate-900">English</option>
                                     </select>
                                     <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-white/70">▼</div>
                                 </div>
                             </div>
 
-                            <button type="button" className="w-full h-14 rounded-lg bg-yellow-400 hover:bg-yellow-300 text-blue-900 font-black text-lg shadow-lg hover:shadow-yellow-400/20 hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
+                            <button type="button" className="w-full h-14 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-black text-lg shadow-lg hover:shadow-cyan-500/25 hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
                                 立即申請 <ArrowRight size={20} />
                             </button>
                         </form>

@@ -426,7 +426,7 @@ export default function Home() {
 
                 <div className="flex flex-col md:flex-row justify-center gap-6">
                   <Link
-                    href="/pricing"
+                    href="/contact"
                     className="group relative px-10 py-4 rounded-full overflow-hidden bg-white text-black font-bold text-lg shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:scale-105 transition-all duration-300"
                   >
                     <span className="relative z-10 flex items-center gap-2">

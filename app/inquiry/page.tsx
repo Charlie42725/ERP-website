@@ -52,35 +52,35 @@ export default function Inquiry() {
                 </div>
 
                 {/* Right Sidebar (Form) */}
-                <div className="w-full lg:w-[480px] shrink-0 bg-blue-600 p-12 flex flex-col justify-center relative z-20 shadow-2xl">
+                <div className="w-full lg:w-[480px] shrink-0 bg-slate-900/60 backdrop-blur-2xl border-l border-white/10 p-12 flex flex-col justify-center relative z-20 shadow-2xl">
                     <div className="relative z-10">
                         <h2 className="text-3xl font-bold text-white mb-8 text-center flex items-center justify-center gap-3">
-                            <HelpCircle className="text-white" /> 申請諮詢
+                            <HelpCircle className="text-cyan-400" /> 申請諮詢
                         </h2>
 
                         <form className="space-y-4">
                             <div>
-                                <label className="text-blue-100 text-sm font-bold block mb-2">公司</label>
-                                <input type="text" className="w-full h-12 rounded-lg px-4 bg-white/20 border border-white/30 text-white placeholder:text-blue-200 focus:outline-none focus:bg-white/30 focus:border-white transition-all" />
+                                <label className="text-slate-300 text-sm font-bold block mb-2">公司</label>
+                                <input type="text" className="w-full h-12 rounded-lg px-4 bg-white/5 border border-white/10 text-white placeholder:text-slate-500 focus:outline-none focus:bg-white/10 focus:border-cyan-500 transition-all" />
                             </div>
                             <div>
-                                <label className="text-blue-100 text-sm font-bold block mb-2">窗口</label>
-                                <input type="text" className="w-full h-12 rounded-lg px-4 bg-white/20 border border-white/30 text-white placeholder:text-blue-200 focus:outline-none focus:bg-white/30 focus:border-white transition-all" />
+                                <label className="text-slate-300 text-sm font-bold block mb-2">窗口</label>
+                                <input type="text" className="w-full h-12 rounded-lg px-4 bg-white/5 border border-white/10 text-white placeholder:text-slate-500 focus:outline-none focus:bg-white/10 focus:border-cyan-500 transition-all" />
                             </div>
                             <div>
-                                <label className="text-blue-100 text-sm font-bold block mb-2">LINE ID (選填)</label>
-                                <input type="text" className="w-full h-12 rounded-lg px-4 bg-white/20 border border-white/30 text-white placeholder:text-blue-200 focus:outline-none focus:bg-white/30 focus:border-white transition-all" />
+                                <label className="text-slate-300 text-sm font-bold block mb-2">LINE ID (選填)</label>
+                                <input type="text" className="w-full h-12 rounded-lg px-4 bg-white/5 border border-white/10 text-white placeholder:text-slate-500 focus:outline-none focus:bg-white/10 focus:border-cyan-500 transition-all" />
                             </div>
                             <div>
-                                <label className="text-blue-100 text-sm font-bold block mb-2">聯絡電話</label>
-                                <input type="tel" className="w-full h-12 rounded-lg px-4 bg-white/20 border border-white/30 text-white placeholder:text-blue-200 focus:outline-none focus:bg-white/30 focus:border-white transition-all" />
+                                <label className="text-slate-300 text-sm font-bold block mb-2">聯絡電話</label>
+                                <input type="tel" className="w-full h-12 rounded-lg px-4 bg-white/5 border border-white/10 text-white placeholder:text-slate-500 focus:outline-none focus:bg-white/10 focus:border-cyan-500 transition-all" />
                             </div>
                             <div>
-                                <label className="text-blue-100 text-sm font-bold block mb-2">諮詢內容</label>
-                                <textarea className="w-full h-32 rounded-lg p-4 bg-white/20 border border-white/30 text-white placeholder:text-blue-200 focus:outline-none focus:bg-white/30 focus:border-white transition-all resize-none"></textarea>
+                                <label className="text-slate-300 text-sm font-bold block mb-2">諮詢內容</label>
+                                <textarea className="w-full h-32 rounded-lg p-4 bg-white/5 border border-white/10 text-white placeholder:text-slate-500 focus:outline-none focus:bg-white/10 focus:border-cyan-500 transition-all resize-none"></textarea>
                             </div>
 
-                            <button type="button" className="w-full h-14 mt-4 rounded-lg bg-yellow-400 hover:bg-yellow-300 text-blue-900 font-black text-lg shadow-lg hover:shadow-yellow-400/20 hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
+                            <button type="button" className="w-full h-14 mt-4 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-black text-lg shadow-lg hover:shadow-cyan-500/25 hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
                                 申請諮詢
                             </button>
                         </form>
