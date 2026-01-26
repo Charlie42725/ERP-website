@@ -98,7 +98,7 @@ export default function Home() {
           <div className="container max-w-[1300px] mx-auto px-6 relative z-10 flex flex-col lg:flex-row gap-8 items-start">
 
             {/* Left Box: Sidebar Menu */}
-            <div className="w-full lg:w-[260px] shrink-0 bg-[#0f1115]/90 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl relative z-50">
+            <div className="w-full lg:w-[260px] shrink-0 bg-[#0f1115]/90 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl relative z-50 order-last lg:order-first">
 
               {/* Mobile View: Accordion Style (< lg) */}
               <div className="lg:hidden flex flex-col">

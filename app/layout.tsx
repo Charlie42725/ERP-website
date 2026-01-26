@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
@@ -16,6 +16,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  themeColor: "#0b0b0b",
+};
+
 export const metadata: Metadata = {
   title: "玩庫ERP | 專為玩具店量身打造",
   description: "簡單易用、功能完整的玩具店專用ERP系統。POS收銀、進銷存、財務管理一次搞定。",
@@ -27,8 +31,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-TW">
+    <html lang="zh-TW" style={{ backgroundColor: "#0b0b0b" }}>
       <body
+        style={{ backgroundColor: "#0b0b0b" }}
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-[#0a0a0f] font-sans text-slate-200 selection:bg-blue-500/30`}
       >
         {/* Global Background Ambience */}
