@@ -98,7 +98,7 @@ export default function Home() {
           <div className="container max-w-[1300px] mx-auto px-6 relative z-10 flex flex-col lg:flex-row gap-8 items-start">
 
             {/* Left Box: Sidebar Menu */}
-            <div className="w-full lg:w-[260px] shrink-0 bg-[#0f1115]/90 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl relative z-50 order-last lg:order-first">
+            <div className="hidden lg:block w-[260px] shrink-0 bg-[#0f1115]/90 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl relative z-50 lg:order-first">
 
               {/* Mobile View: Accordion Style (< lg) */}
               <div className="lg:hidden flex flex-col">
@@ -278,9 +278,9 @@ export default function Home() {
 
                   <ul className="space-y-6">
                     {[
-                      "賣出一件商品 → 庫存自動扣減",
-                      "進貨一筆商品 → 成本自動平均計算",
-                      "收到一筆款項 → 帳戶餘額自動更新"
+                      "協助 7 天內完成資料庫導入上線",
+                      "解決預購、庫存、金流混亂問題 ",
+                      "AI助手功能 → 隨問隨答分析資料"
                     ].map((text, i) => (
                       <ScrollAnimation key={i} delay={i * 200}>
                         <li className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/5 hover:border-cyan-500/30 hover:bg-cyan-500/5 transition-all duration-300 hover:shadow-[0_0_15px_rgba(34,211,238,0.1)]">
@@ -331,7 +331,7 @@ export default function Home() {
             <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#05050a] to-transparent z-20 pointer-events-none"></div>
             <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#05050a] to-transparent z-20 pointer-events-none"></div>
 
-            <div className="animate-marquee flex gap-6 whitespace-nowrap hover:[animation-play-state:paused] px-4">
+            <div className="animate-marquee flex gap-3 md:gap-6 whitespace-nowrap hover:[animation-play-state:paused] px-4">
               {[
                 { title: "100%全雲端", icon: Cloud, desc: "隨時隨地，即時同步" },
                 { title: "使用人數無上限", icon: Users, desc: "團隊擴張，費用不變" },
@@ -344,20 +344,20 @@ export default function Home() {
                 { title: "免費更新升級", icon: RefreshCw, desc: "永遠使用最新版本" },
                 { title: "完美的後援服務", icon: Phone, desc: "專業顧問，即時支援" },
               ].map((item, idx) => (
-                <div key={idx} className="group/card relative w-[240px] h-[160px] shrink-0 rounded-2xl bg-white/5 border border-white/10 overflow-hidden backdrop-blur-md transition-all duration-500 hover:scale-105 hover:bg-white/10 hover:border-cyan-500/30 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]">
+                <div key={idx} className="group/card relative w-[160px] h-[140px] md:w-[240px] md:h-[160px] shrink-0 rounded-2xl bg-white/5 border border-white/10 overflow-hidden backdrop-blur-md transition-all duration-500 hover:scale-105 hover:bg-white/10 hover:border-cyan-500/30 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]">
                   {/* Card Glow Effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
 
                   <div className="absolute top-0 right-0 p-4 opacity-20 group-hover/card:opacity-100 transition-opacity transform group-hover/card:rotate-12 duration-500">
-                    <item.icon size={60} className="text-white fill-white/5" />
+                    <item.icon className="text-white fill-white/5 w-10 h-10 md:w-16 md:h-16" />
                   </div>
 
-                  <div className="relative z-10 h-full flex flex-col justify-center p-6">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mb-3 shadow-lg shadow-blue-500/30 group-hover/card:scale-110 transition-transform duration-300">
-                      <item.icon size={20} className="text-white" />
+                  <div className="relative z-10 h-full flex flex-col justify-center p-4 md:p-6">
+                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mb-3 shadow-lg shadow-blue-500/30 group-hover/card:scale-110 transition-transform duration-300">
+                      <item.icon className="text-white w-4 h-4 md:w-5 md:h-5" />
                     </div>
-                    <h3 className="text-lg font-bold text-white mb-1">{item.title}</h3>
-                    <p className="text-slate-400 text-xs font-medium">{item.desc}</p>
+                    <h3 className="text-sm md:text-lg font-bold text-white mb-1">{item.title}</h3>
+                    <p className="text-slate-400 text-[10px] md:text-xs font-medium">{item.desc}</p>
                   </div>
                 </div>
               ))}
