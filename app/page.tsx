@@ -465,8 +465,8 @@ export default function Home() {
 
                 <div className="flex flex-col items-center justify-center gap-1 mb-6">
                   <div className="flex items-baseline gap-2 text-slate-400 font-bold mb-2">
-                    <span className="text-xl">每月</span>
-                    <span className="text-3xl text-white">1,500</span>
+                    <span className="text-2xl">每月</span>
+                    <span className="text-4xl text-white">1,500</span>
                   </div>
 
                   <div className="relative">
