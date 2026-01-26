@@ -236,9 +236,9 @@ export default function Home() {
         <section className="pt-0 pb-12 relative">
           <ScrollAnimation>
             <div className="max-w-7xl mx-auto px-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white">
                 <span className="block text-cyan-500 text-sm font-mono mb-2">為什麼需要ERP系統?</span>
-                玩具店目前面臨的 <br className="md:hidden" /><span className="text-white">經營痛點</span>
+                <span className="!text-white" style={{ color: '#ffffff' }}>玩具店目前面臨的</span> <br className="md:hidden" /><span className="text-white">經營痛點</span>
               </h2>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -314,7 +314,7 @@ export default function Home() {
         {/* --- New Section: Why Choose Toyflow (Carousel) --- */}
         < section className="py-12 relative overflow-hidden" >
           {/* Background Effects */}
-          < div className="absolute inset-0 bg-[#05050a]" ></div >
+          {/* <div className="absolute inset-0 bg-[#05050a]"></div> Removed for transparency */}
           <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/20 blur-[150px] rounded-full mix-blend-screen animate-pulse-slow"></div>
           <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-600/20 blur-[150px] rounded-full mix-blend-screen animate-pulse-slow delay-1000"></div>
 
@@ -377,16 +377,16 @@ export default function Home() {
         {/* --- New Section: Pricing Banner (Tech Style) --- */}
         < section className="py-12 relative overflow-hidden" >
           {/* Dynamic Background */}
-          < div className="absolute inset-0 bg-[#020408]" >
+          < div className="absolute inset-0" >
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20 [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 via-transparent to-cyan-900/40"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-transparent to-cyan-900/20"></div>
           </div >
 
           <div className="max-w-3xl mx-auto px-6 relative z-10">
             <div className="relative rounded-[2rem] p-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 shadow-[0_0_40px_rgba(59,130,246,0.2)]">
               <div className="absolute inset-0 bg-white/50 blur-xl opacity-20 animate-pulse"></div>
 
-              <div className="relative rounded-[1.8rem] bg-[#0a0a0f] overflow-hidden px-6 py-10 md:px-12 md:py-12 text-center">
+              <div className="relative rounded-[1.8rem] bg-black/60 backdrop-blur-xl overflow-hidden px-6 py-10 md:px-12 md:py-12 text-center">
                 {/* Inner Glow */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-20 bg-blue-500/20 blur-[60px] rounded-full pointer-events-none"></div>
 

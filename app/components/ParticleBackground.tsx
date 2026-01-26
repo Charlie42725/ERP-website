@@ -43,8 +43,8 @@ export default function ParticleBackground() {
                 particles.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
-                    vx: (Math.random() - 0.5) * 0.2, // Very slow drift (8-15s feel)
-                    vy: (Math.random() - 0.5) * 0.2,
+                    vx: (Math.random() - 0.5) * 0.05, // Ultra slow drift
+                    vy: (Math.random() - 0.5) * 0.05,
                     size: Math.random() * 4 + 2, // 2px - 6px
                     alpha: Math.random() * 0.5 + 0.1, // 0.1 - 0.6 start
                     targetAlpha: Math.random() * 0.5 + 0.1,
