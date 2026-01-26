@@ -243,10 +243,10 @@ export default function Home() {
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  { title: "庫存亂、成本不清", desc: "每次銷售都要手動扣庫存，不知道剩多少貨，也不知道成本。", icon: Box, color: "text-red-400" },
+                  { title: "庫存亂、成本不清、預購單", desc: "每次銷售都要手動扣庫存，不知道剩多少貨，也不知道成本。", icon: Box, color: "text-red-400" },
                   { title: "帳目混亂", desc: "現金、轉帳、零用金混在一起，收支統計困難，錢去哪了？", icon: TrendingUp, color: "text-orange-400" },
-                  { title: "欠款難追蹤", desc: "客戶賒帳常忘記催款，不知道誰逾期、逾期多久。", icon: AlertCircle, color: "text-yellow-400" },
-                  { title: "沒時間做報表", desc: "忙著賣貨，沒空計算今天的毛利和淨利。", icon: BarChart3, color: "text-purple-400" }
+                  { title: "欠款難追蹤", desc: "客戶賒帳與廠商款項，忘記催款，不知道誰逾期、逾期多久、多少金流。", icon: AlertCircle, color: "text-yellow-400" },
+                  { title: "沒時間做報表", desc: "忙著賣貨，沒空計算今天的毛利和淨利，不知道真的賺了多少錢。", icon: BarChart3, color: "text-purple-400" }
                 ].map((item, idx) => (
                   <ScrollAnimation key={idx} delay={idx * 150} className="h-full">
                     <div className="p-6 rounded-2xl border border-white/5 bg-white/5 backdrop-blur-lg box-glow-hover neon-border-blue transition-all h-full group">
@@ -274,12 +274,12 @@ export default function Home() {
               <div className="grid lg:grid-cols-2 gap-16 items-center">
                 <div>
                   <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">解決方案：<br />一套系統搞定所有需求</h2>
-                  <p className="text-xl text-slate-300 mb-8">POS 收銀 + 進銷存 + 財務管理，全部整合在一起，不用買多套軟體。</p>
+                  <p className="text-xl text-slate-300 mb-8">POS 收銀 + 進銷存 + 財務管理，全部整合，不用買多套軟體。</p>
 
                   <ul className="space-y-6">
                     {[
                       "協助 7 天內完成資料庫導入上線",
-                      "解決預購、庫存、金流混亂問題 ",
+                      "解決預購、庫存、金流混亂問題",
                       "AI助手功能 → 隨問隨答分析資料"
                     ].map((text, i) => (
                       <ScrollAnimation key={i} delay={i * 200}>
@@ -291,7 +291,7 @@ export default function Home() {
                     ))}
                   </ul>
                   <div className="mt-8 p-4 border-l-4 border-cyan-500 bg-cyan-500/5">
-                    <p className="text-cyan-200">💡 重點：只要做「收銀」和「進貨」兩個動作，後面的庫存和財務報表系統會自己幫我們算好。</p>
+                    <p className="text-cyan-200">💡 重點：只要做「收銀」和「進貨」兩個動作，庫存和財務報表系統會自己幫我們算好。</p>
                   </div>
                 </div>
                 <div className="relative h-[500px] w-full rounded-2xl border border-white/10 bg-[#15151a] shadow-2xl flex items-center justify-center overflow-hidden group">

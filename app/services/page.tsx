@@ -6,13 +6,7 @@ import { Globe, User, Phone, MessageSquare, MonitorPlay, RefreshCw, BookOpen, Sm
 
 export default function Services() {
     return (
-        <div className="min-h-screen bg-[#0a0a0f] font-sans text-slate-200 selection:bg-blue-500/30">
-            {/* Background Ambience */}
-            <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/20 blur-[120px] rounded-full mix-blend-screen animate-pulse-slow"></div>
-                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-cyan-600/20 blur-[120px] rounded-full mix-blend-screen animate-pulse-slow delay-1000"></div>
-                <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-20"></div>
-            </div>
+        <div className="min-h-screen font-sans text-slate-200 selection:bg-blue-500/30">
 
             {/* Glass Header */}
             <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/50 backdrop-blur-xl supports-[backdrop-filter]:bg-black/20">
@@ -77,9 +71,9 @@ export default function Services() {
 
                 {/* Main Content */}
                 <div className="flex-1">
-                    <h1 className="text-4xl font-bold text-white mb-8 border-b border-white/10 pb-8 flex items-center gap-4">
+                    <h1 className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-glow-magenta mb-8 border-b border-white/10 pb-8 flex items-center gap-4">
                         產品功能介紹
-                        <div className="h-2 w-2 rounded-full bg-cyan-500 animate-pulse"></div>
+                        <div className="h-2 w-2 rounded-full bg-cyan-500 animate-pulse box-shadow-glow"></div>
                     </h1>
 
                     <div className="space-y-12">

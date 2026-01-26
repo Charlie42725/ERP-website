@@ -6,14 +6,7 @@ import { CheckCircle2, Phone, Mail, Clock, ArrowRight } from "lucide-react";
 
 export default function ContactSales() {
     return (
-        <div className="min-h-screen bg-[#0a0a0f] font-sans text-slate-200">
-            {/* Background Ambience */}
-            <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-blue-600/10 blur-[120px] rounded-full mix-blend-screen animate-pulse-slow"></div>
-                <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-cyan-600/10 blur-[120px] rounded-full mix-blend-screen animate-pulse-slow delay-1000"></div>
-                <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-20"></div>
-            </div>
-
+        <div className="min-h-screen font-sans text-slate-200 selection:bg-blue-500/30">
             {/* Glass Header */}
             <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/50 backdrop-blur-xl">
                 <div className="mx-auto flex h-[72px] max-w-[1200px] items-center justify-between px-6">
@@ -26,7 +19,7 @@ export default function ContactSales() {
                 </div>
             </header>
 
-            <main className="relative pt-[72px] min-h-screen flex flex-col lg:flex-row">
+            <main className="relative min-h-screen flex flex-col lg:flex-row pt-[72px]">
 
                 {/* Left Content (Value Prop) */}
                 <div className="flex-1 p-12 lg:p-24 flex flex-col justify-center relative z-10">
@@ -63,22 +56,20 @@ export default function ContactSales() {
                 </div>
 
                 {/* Right Sidebar (Form) */}
-                <div className="w-full lg:w-[480px] bg-gradient-to-b from-blue-600 to-blue-900 relative flex flex-col justify-center p-12 shadow-2xl z-20">
-                    <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10 mix-blend-overlay"></div>
-
+                <div className="w-full lg:w-[480px] shrink-0 bg-blue-600 p-12 flex flex-col justify-center relative z-20 shadow-2xl">
                     <div className="relative z-10">
                         <h2 className="text-3xl font-bold text-white mb-8 text-center">快速體驗申請</h2>
 
                         <form className="space-y-6">
                             <div className="space-y-2">
                                 <label className="text-blue-100 text-sm font-bold">E-mail</label>
-                                <input type="email" className="w-full h-12 rounded-lg px-4 bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:bg-white/20 focus:border-white transition-all" placeholder="請輸入您的 Email" />
+                                <input type="email" className="w-full h-12 rounded-lg px-4 bg-white/20 border border-white/30 text-white placeholder:text-blue-200 focus:outline-none focus:bg-white/30 focus:border-white transition-all" placeholder="請輸入您的 Email" />
                             </div>
 
                             <div className="space-y-2">
                                 <label className="text-blue-100 text-sm font-bold">語言</label>
                                 <div className="relative">
-                                    <select className="w-full h-12 rounded-lg px-4 bg-white/10 border border-white/20 text-white focus:outline-none focus:bg-white/20 appearance-none cursor-pointer">
+                                    <select className="w-full h-12 rounded-lg px-4 bg-white/20 border border-white/30 text-white focus:outline-none focus:bg-white/30 appearance-none cursor-pointer">
                                         <option className="bg-blue-900">繁體中文</option>
                                         <option className="bg-blue-900">English</option>
                                     </select>
@@ -90,8 +81,6 @@ export default function ContactSales() {
                                 立即申請 <ArrowRight size={20} />
                             </button>
                         </form>
-
-
                     </div>
                 </div>
 

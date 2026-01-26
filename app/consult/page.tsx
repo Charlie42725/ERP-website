@@ -6,20 +6,17 @@ import { Globe, User, Clock, HeartHandshake, CheckCircle2, ChevronRight, Video, 
 
 export default function Consult() {
     return (
-        <div className="min-h-screen bg-[#0a0a0f] font-sans text-slate-200 selection:bg-blue-500/30">
-            {/* Background Ambience */}
-            <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/20 blur-[120px] rounded-full mix-blend-screen animate-pulse-slow"></div>
-                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-cyan-600/20 blur-[120px] rounded-full mix-blend-screen animate-pulse-slow delay-1000"></div>
-                <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-20"></div>
-            </div>
-
+        <div className="min-h-screen font-sans text-slate-200 selection:bg-blue-500/30">
             {/* Glass Header (Global in layout) */}
 
             <main className="relative pt-32 pb-24 px-6 max-w-[1400px] mx-auto min-h-screen">
                 <div className="text-center mb-20 animate-in fade-in slide-in-from-bottom-8 duration-700">
-                    <h1 className="text-4xl md:text-6xl font-black text-white mb-6">免費諮詢</h1>
-                    <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-orange-500 mx-auto rounded-full shadow-[0_0_15px_rgba(239,68,68,0.5)]"></div>
+                    <h1 className="text-4xl md:text-6xl font-black text-white mb-6">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-500 to-yellow-500 text-glow-magenta">
+                            免費諮詢
+                        </span>
+                    </h1>
+                    <div className="w-24 h-1.5 bg-gradient-to-r from-red-500 to-orange-500 mx-auto rounded-full shadow-[0_0_15px_rgba(239,68,68,0.5)]"></div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto mb-20">
@@ -78,7 +75,7 @@ export default function Consult() {
                 </div>
 
                 {/* Info/Notes */}
-                <div className="max-w-4xl mx-auto p-8 rounded-2xl bg-[#111] border border-white/10">
+                <div className="max-w-4xl mx-auto p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
                     <ul className="space-y-4 text-slate-400 text-sm md:text-base">
                         <li className="flex gap-3 items-center">
                             <div className="w-1.5 h-1.5 rounded-full bg-slate-500"></div>

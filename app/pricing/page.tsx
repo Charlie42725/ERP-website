@@ -4,22 +4,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { Globe, User, Check, Smartphone, MessageCircle, Globe2, ShoppingCart, FileText, Headphones, CreditCard } from "lucide-react";
 
+import Typewriter from "../components/Typewriter";
+
 export default function Pricing() {
     return (
-        <div className="min-h-screen bg-[#0a0a0f] font-sans text-slate-200 selection:bg-blue-500/30">
-            {/* Background Ambience */}
-            <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/20 blur-[120px] rounded-full mix-blend-screen animate-pulse-slow"></div>
-                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-cyan-600/20 blur-[120px] rounded-full mix-blend-screen animate-pulse-slow delay-1000"></div>
-                <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-20"></div>
-            </div>
-
+        <div className="min-h-screen font-sans text-slate-200 selection:bg-blue-500/30">
             {/* Glass Header (Global in layout) */}
 
             <main className="relative pt-32 pb-24 px-6 max-w-[1400px] mx-auto min-h-screen">
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">價格方案</h1>
-                    <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto rounded-full"></div>
+                    <h1 className="text-4xl md:text-5xl font-black text-white mb-6">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-glow-magenta">
+                            價格方案
+                        </span>
+                    </h1>
+                    <div className="w-24 h-1.5 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto rounded-full shadow-[0_0_20px_rgba(34,211,238,0.5)]"></div>
                 </div>
 
                 {/* Pricing Table */}
