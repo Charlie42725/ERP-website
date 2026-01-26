@@ -9,7 +9,6 @@ import {
 } from "lucide-react";
 import Typewriter from "./components/Typewriter";
 import ScrollAnimation from "./components/ScrollAnimation";
-import ParticleBackground from "./components/ParticleBackground";
 
 export default function Home() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
@@ -87,15 +86,9 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0f] font-sans text-slate-200 selection:bg-blue-500/30">
+    <div className="">
 
-      {/* Background Ambience */}
-      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/20 blur-[120px] rounded-full mix-blend-screen animate-pulse-slow"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-cyan-600/20 blur-[120px] rounded-full mix-blend-screen animate-pulse-slow delay-1000"></div>
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-20"></div>
-        <ParticleBackground />
-      </div>
+      {/* Glass Header (Global in layout) */}
 
       {/* Glass Header (Global in layout) */}
 
@@ -234,15 +227,6 @@ export default function Home() {
                 專為玩具店量身打造的經營管理系統。
                 <span className="block mt-2 text-cyan-200 font-medium text-glow-blue">簡單易用 · 功能完整 · 自動智慧</span>
               </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
-                <Link href="/consult" className="btn-neon-primary px-10 py-4 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-bold flex items-center justify-center gap-2">
-                  立即免費試用 <ChevronRight size={18} />
-                </Link>
-                <Link href="/pricing" className="px-10 py-4 rounded-full border border-white/20 hover:bg-white/5 text-white font-bold transition-all flex items-center justify-center hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_15px_rgba(34,211,238,0.1)]">
-                  查看方案與價格
-                </Link>
-              </div>
             </div>
           </div>
         </section>
@@ -253,7 +237,7 @@ export default function Home() {
           <ScrollAnimation>
             <div className="max-w-7xl mx-auto px-6">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-                <span className="block text-cyan-500 text-sm font-mono mb-2">WHY NOW?</span>
+                <span className="block text-cyan-500 text-sm font-mono mb-2">為什麼需要ERP系統?</span>
                 玩具店目前面臨的 <span className="text-white">經營痛點</span>
               </h2>
 
@@ -472,29 +456,53 @@ export default function Home() {
                 {/* Inner Glow */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-20 bg-blue-500/20 blur-[60px] rounded-full pointer-events-none"></div>
 
-                <h2 className="text-xl md:text-2xl font-bold text-cyan-400 mb-6 tracking-wider font-sans">
-                  全方位 ERP 管理平台
+                <h2 className="text-xl md:text-2xl font-bold text-cyan-400 mb-2 tracking-wider font-sans">
+                  零售店專用 ERP 管理平台
                 </h2>
+                <div className="text-white font-bold text-lg mb-6">
+                  比 Excel 快 10 倍，錯帳率降低 80%
+                </div>
 
-                <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
-                  <span className="text-2xl md:text-3xl font-bold text-white">每月</span>
+                <div className="flex flex-col items-center justify-center gap-1 mb-6">
+                  <div className="flex items-baseline gap-2 text-slate-400 font-bold mb-2">
+                    <span className="text-xl">每月</span>
+                    <span className="text-2xl">1,500</span>
+                  </div>
+
                   <div className="relative">
-                    <span className="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-400 leading-none tracking-tighter drop-shadow-xl">
-                      1,500
+                    <span className="block text-sm text-cyan-300 font-bold mb-1 tracking-widest uppercase">Daily Cost</span>
+                    <span className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-400 to-red-400 leading-none tracking-tighter drop-shadow-[0_0_15px_rgba(251,146,60,0.5)]">
+                      每天不到 50 元
                     </span>
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-3 mb-10 text-left max-w-sm mx-auto">
+                  <div className="flex items-center gap-3 text-white font-bold">
+                    <CheckCircle2 className="text-green-400 shrink-0" size={20} />
+                    <span>7 天內完成導入上線</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-white font-bold">
+                    <CheckCircle2 className="text-green-400 shrink-0" size={20} />
+                    <span>3 秒看懂毛利 / 庫存 / 熱賣</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-white font-bold">
+                    <CheckCircle2 className="text-green-400 shrink-0" size={20} />
+                    <span>一句提問查帳：AI 助手幫你查</span>
                   </div>
                 </div>
 
                 <div className="flex flex-col md:flex-row justify-center gap-6">
                   <Link
                     href="/pricing"
-                    className="group relative px-8 py-3 rounded-full overflow-hidden bg-white text-black font-bold text-base shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:scale-105 transition-all duration-300"
+                    className="group relative px-10 py-4 rounded-full overflow-hidden bg-white text-black font-bold text-lg shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:scale-105 transition-all duration-300"
                   >
                     <span className="relative z-10 flex items-center gap-2">
-                      查看 ERP 價格政策 <ChevronRight size={16} className="transition-transform group-hover:translate-x-1" />
+                      立即免費試用 <ChevronRight size={18} className="transition-transform group-hover:translate-x-1" />
                     </span>
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-200 to-blue-200 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </Link>
+
                 </div>
               </div>
             </div>
