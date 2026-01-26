@@ -464,14 +464,10 @@ export default function Home() {
                 </div>
 
                 <div className="flex flex-col items-center justify-center gap-1 mb-6">
-                  <div className="flex items-baseline gap-2 text-slate-400 font-bold mb-2">
-                    <span className="text-2xl">每月</span>
-                    <span className="text-4xl text-white">1,500</span>
-                  </div>
-
-                  <div className="relative">
-                    <span className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-400 to-red-400 leading-none tracking-tighter drop-shadow-[0_0_15px_rgba(251,146,60,0.5)]">
-                      每天只要 50 元
+                  <div className="flex items-baseline gap-2 text-white font-bold mb-2">
+                    <span className="text-2xl md:text-3xl">每月</span>
+                    <span className="text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-400 to-red-400 leading-none tracking-tighter drop-shadow-[0_0_15px_rgba(251,146,60,0.5)]">
+                      1,500
                     </span>
                   </div>
                 </div>
