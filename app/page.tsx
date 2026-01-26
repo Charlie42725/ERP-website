@@ -217,7 +217,7 @@ export default function Home() {
                 <span className="text-glow-blue">
                   <Typewriter text="告別庫存混亂" speed={150} />
                 </span>
-                <br className="hidden lg:block" />
+                <br className="block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-glow-magenta">
                   <Typewriter text="隨時掌控生意" speed={150} startDelay={1500} />
                 </span>
@@ -238,7 +238,7 @@ export default function Home() {
             <div className="max-w-7xl mx-auto px-6">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
                 <span className="block text-cyan-500 text-sm font-mono mb-2">為什麼需要ERP系統?</span>
-                玩具店目前面臨的 <span className="text-white">經營痛點</span>
+                玩具店目前面臨的 <br className="md:hidden" /><span className="text-white">經營痛點</span>
               </h2>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -308,74 +308,8 @@ export default function Home() {
 
 
 
-        {/* --- 5. Core Features (System Introduction) --- */}
-        < section className="py-24 bg-white/5 backdrop-blur-sm" >
-          <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-3xl font-bold text-center text-white mb-16">
-              核心功能介紹
-            </h2>
 
-            <div className="grid lg:grid-cols-2 gap-16">
-              {/* Feature Group 1: Operations */}
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                  <Smartphone className="text-cyan-400" /> 門市與銷售
-                </h3>
-                <div className="space-y-6">
-                  <div className="p-6 rounded-2xl bg-black/20 border border-white/5">
-                    <h4 className="text-lg font-bold text-white mb-2">POS 收銀系統</h4>
-                    <p className="text-slate-400 text-sm">掃碼收銀，支援多種付款方式。商品快速建檔，直播銷售模式可批量匯入訂單。</p>
-                  </div>
-                  <div className="p-6 rounded-2xl bg-black/20 border border-white/5">
-                    <h4 className="text-lg font-bold text-white mb-2">商品與進貨管理</h4>
-                    <p className="text-slate-400 text-sm">建立商品庫，條碼管理。輕鬆記錄進貨，系統自動更新庫存與平均成本。</p>
-                  </div>
-                  <div className="p-6 rounded-2xl bg-black/20 border border-white/5">
-                    <h4 className="text-lg font-bold text-white mb-2">銷售紀錄追蹤</h4>
-                    <p className="text-slate-400 text-sm">完整的銷售歷史，依日期、客戶篩選，一鍵匯出資料分析。</p>
-                  </div>
-                </div>
-              </div>
 
-              {/* Feature Group 2: Finance */}
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                  <BarChart3 className="text-yellow-400" /> 財務與報表
-                </h3>
-                <div className="grid gap-4">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-pink-500/10 text-pink-400"><Users size={20} /></div>
-                    <div>
-                      <h4 className="text-white font-bold">應收/應付帳款</h4>
-                      <p className="text-slate-400 text-sm">欠款一目了然，逾期智慧提醒。支援批量收款與付款沖銷。</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-purple-500/10 text-purple-400"><CreditCard size={20} /></div>
-                    <div>
-                      <h4 className="text-white font-bold">帳戶與費用管理</h4>
-                      <p className="text-slate-400 text-sm">現金/銀行多帳戶管理，交易流水即時更新。記錄薪資、租金等各項費用。</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-indigo-500/10 text-indigo-400"><TrendingUp size={20} /></div>
-                    <div>
-                      <h4 className="text-white font-bold">儀表板與日結</h4>
-                      <p className="text-slate-400 text-sm">即時經營數據看板，今日營收、毛利分析。支援營業日日結功能。</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-cyan-500/10 text-cyan-400"><Gift size={20} /></div>
-                    <div>
-                      <h4 className="text-white font-bold">特色功能</h4>
-                      <p className="text-slate-400 text-sm">一番賞管理系統、條碼列印、直播訂單與出貨管理。</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section >
 
         {/* --- New Section: Why Choose Toyflow (Carousel) --- */}
         < section className="py-12 relative overflow-hidden" >
@@ -469,6 +403,9 @@ export default function Home() {
                     <span className="text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-400 to-red-400 leading-none tracking-tighter drop-shadow-[0_0_15px_rgba(251,146,60,0.5)]">
                       1,500
                     </span>
+                  </div>
+                  <div className="text-cyan-300 font-bold text-lg tracking-wider">
+                    每天只要 50 元
                   </div>
                 </div>
 

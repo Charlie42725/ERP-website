@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Globe, User, Phone, MessageSquare, MonitorPlay, RefreshCw, BookOpen } from "lucide-react";
+import { Globe, User, Phone, MessageSquare, MonitorPlay, RefreshCw, BookOpen, Smartphone, BarChart3, Users, CreditCard, TrendingUp, Gift } from "lucide-react";
 
 export default function Services() {
     return (
@@ -78,63 +78,65 @@ export default function Services() {
                 {/* Main Content */}
                 <div className="flex-1">
                     <h1 className="text-4xl font-bold text-white mb-8 border-b border-white/10 pb-8 flex items-center gap-4">
-                        客戶諮詢服務
+                        產品功能介紹
                         <div className="h-2 w-2 rounded-full bg-cyan-500 animate-pulse"></div>
                     </h1>
 
                     <div className="space-y-12">
-                        {/* Service Block 1 */}
-                        <div className="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-cyan-500/30 transition-all">
-                            <div className="flex items-start gap-6">
-                                <div className="w-16 h-16 rounded-2xl bg-blue-600/20 flex items-center justify-center shrink-0">
-                                    <Phone size={32} className="text-blue-400" />
+                        {/* Feature Group 1: Operations */}
+                        <div>
+                            <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+                                <Smartphone className="text-cyan-400" /> 門市與銷售
+                            </h3>
+                            <div className="space-y-6">
+                                <div className="p-6 rounded-2xl bg-black/20 border border-white/5 hover:border-cyan-500/30 transition-all">
+                                    <h4 className="text-lg font-bold text-white mb-2">POS 收銀系統</h4>
+                                    <p className="text-slate-400 text-sm">掃碼收銀，支援多種付款方式。商品快速建檔，直播銷售模式可批量匯入訂單。</p>
                                 </div>
-                                <div>
-                                    <h2 className="text-2xl font-bold text-white mb-4">專業ERP顧問電話諮詢服務</h2>
-                                    <ul className="space-y-4 text-slate-300 leading-relaxed">
-                                        <li className="flex gap-3">
-                                            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2.5"></div>
-                                            <span>可以與玩庫ERP的顧問進行電話諮詢。</span>
-                                        </li>
-                                        <li className="flex gap-3">
-                                            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2.5"></div>
-                                            <span>在使用玩庫ERP的過程中遇到問題時，透過申請電話諮詢，就會有專業的客服顧問與您聯繫。</span>
-                                        </li>
-                                        <li className="flex gap-3 items-center">
-                                            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                                            <span>電話諮詢服務時間：工作日 09點 ~ 18點</span>
-                                        </li>
-                                    </ul>
+                                <div className="p-6 rounded-2xl bg-black/20 border border-white/5 hover:border-cyan-500/30 transition-all">
+                                    <h4 className="text-lg font-bold text-white mb-2">商品與進貨管理</h4>
+                                    <p className="text-slate-400 text-sm">建立商品庫，條碼管理。輕鬆記錄進貨，系統自動更新庫存與平均成本。</p>
+                                </div>
+                                <div className="p-6 rounded-2xl bg-black/20 border border-white/5 hover:border-cyan-500/30 transition-all">
+                                    <h4 className="text-lg font-bold text-white mb-2">銷售紀錄追蹤</h4>
+                                    <p className="text-slate-400 text-sm">完整的銷售歷史，依日期、客戶篩選，一鍵匯出資料分析。</p>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Service Block 2 */}
-                        <div className="group p-8 rounded-3xl bg-white/5 border border-white/10 hover:border-cyan-500/30 transition-all">
-                            <div className="flex items-start gap-6">
-                                <div className="w-16 h-16 rounded-2xl bg-purple-600/20 flex items-center justify-center shrink-0">
-                                    <MessageSquare size={32} className="text-purple-400" />
+                        {/* Feature Group 2: Finance */}
+                        <div>
+                            <h3 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+                                <BarChart3 className="text-yellow-400" /> 財務與報表
+                            </h3>
+                            <div className="grid md:grid-cols-2 gap-4">
+                                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors">
+                                    <div className="p-3 rounded-lg bg-pink-500/10 text-pink-400 shrink-0"><Users size={20} /></div>
+                                    <div>
+                                        <h4 className="text-white font-bold mb-1">應收/應付帳款</h4>
+                                        <p className="text-slate-400 text-sm">欠款一目了然，逾期智慧提醒。支援批量收款與付款沖銷。</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h2 className="text-2xl font-bold text-white mb-4">在線留言諮詢服務</h2>
-                                    <ul className="space-y-4 text-slate-300 leading-relaxed">
-                                        <li className="flex gap-3">
-                                            <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2.5"></div>
-                                            <span>在使用玩庫ERP的過程中遇到疑問時，可使用系統內提供的在線留言諮詢平台進行諮詢。</span>
-                                        </li>
-                                        <li className="flex gap-3">
-                                            <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2.5"></div>
-                                            <span>在工作日會即時解答您提交的問題。</span>
-                                        </li>
-                                        <li className="flex gap-3">
-                                            <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2.5"></div>
-                                            <span>固定假日期間，會在假日結束後回覆或電話與您聯繫進行說明。</span>
-                                        </li>
-                                        <li className="flex gap-3 items-center">
-                                            <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
-                                            <span>在线諮詢服務時間：工作日 09點 ~ 18點</span>
-                                        </li>
-                                    </ul>
+                                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors">
+                                    <div className="p-3 rounded-lg bg-purple-500/10 text-purple-400 shrink-0"><CreditCard size={20} /></div>
+                                    <div>
+                                        <h4 className="text-white font-bold mb-1">帳戶與費用管理</h4>
+                                        <p className="text-slate-400 text-sm">現金/銀行多帳戶管理，交易流水即時更新。記錄薪資、租金等各項費用。</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors">
+                                    <div className="p-3 rounded-lg bg-indigo-500/10 text-indigo-400 shrink-0"><TrendingUp size={20} /></div>
+                                    <div>
+                                        <h4 className="text-white font-bold mb-1">儀表板與日結</h4>
+                                        <p className="text-slate-400 text-sm">即時經營數據看板，今日營收、毛利分析。支援營業日日結功能。</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition-colors">
+                                    <div className="p-3 rounded-lg bg-cyan-500/10 text-cyan-400 shrink-0"><Gift size={20} /></div>
+                                    <div>
+                                        <h4 className="text-white font-bold mb-1">特色功能</h4>
+                                        <p className="text-slate-400 text-sm">一番賞管理系統、條碼列印、直播訂單與出貨管理。</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
