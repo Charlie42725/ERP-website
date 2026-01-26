@@ -318,33 +318,7 @@ export default function Home() {
           </ScrollAnimation>
         </section >
 
-        {/* --- 4. Cost & Maintenance (Low Risk) --- */}
-        < section className="py-24 text-center" >
-          <ScrollAnimation>
-            <div className="max-w-4xl mx-auto px-6">
-              <h2 className="text-3xl font-bold text-white mb-12">成本與維護 (Low Risk)</h2>
-              <div className="grid md:grid-cols-3 gap-8 text-left mb-16">
-                {[
-                  { title: "雲端部署", desc: "資料即時同步，不需架設伺服器，不怕電腦壞掉。", val: "100%", sub: "雲端部屬", icon: Cloud },
-                  { title: "無需 IT 人員", desc: "系統穩定，買的是服務，不用養工程師。", val: "0元", sub: "維護成本", icon: Settings },
-                  { title: "持續擴充", desc: "退貨管理、盤點調整...系統隨公司成長。", val: "24h", sub: "即時支援", icon: TrendingUp }
-                ].map((item, idx) => (
-                  <ScrollAnimation key={idx} delay={idx * 150} className="h-full">
-                    <div className="p-6 h-full">
-                      <item.icon className="text-cyan-400 mb-4 h-8 w-8" />
-                      <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
-                      <p className="text-slate-400 text-sm">{item.desc}</p>
-                      <div className="mt-4 text-2xl font-bold text-white">{item.val}</div>
-                      <div className="text-xs text-slate-500">{item.sub}</div>
-                    </div>
-                  </ScrollAnimation>
-                ))}
-              </div>
 
-
-            </div>
-          </ScrollAnimation>
-        </section >
 
         {/* --- 5. Core Features (System Introduction) --- */}
         < section className="py-24 bg-white/5 backdrop-blur-sm" >
@@ -526,7 +500,30 @@ export default function Home() {
         {/* --- 6. Low Risk / Footer --- */}
         < section className="py-24 text-center" >
           <div className="max-w-4xl mx-auto px-6">
-
+            <h2 className="text-3xl font-bold text-white mb-12">成本與維護 (Low Risk)</h2>
+            <div className="grid md:grid-cols-3 gap-8 text-left mb-16">
+              <div className="p-6">
+                <Cloud className="text-cyan-400 mb-4 h-8 w-8" />
+                <h4 className="text-lg font-bold text-white mb-2">雲端部署</h4>
+                <p className="text-slate-400 text-sm">資料即時同步，不需架設伺服器，不怕電腦壞掉。</p>
+                <div className="mt-4 text-2xl font-bold text-white">100%</div>
+                <div className="text-xs text-slate-500">雲端部屬</div>
+              </div>
+              <div className="p-6">
+                <Settings className="text-cyan-400 mb-4 h-8 w-8" />
+                <h4 className="text-lg font-bold text-white mb-2">無需 IT 人員</h4>
+                <p className="text-slate-400 text-sm">系統穩定，買的是服務，不用養工程師。</p>
+                <div className="mt-4 text-2xl font-bold text-white">0元</div>
+                <div className="text-xs text-slate-500">維護成本</div>
+              </div>
+              <div className="p-6">
+                <TrendingUp className="text-cyan-400 mb-4 h-8 w-8" />
+                <h4 className="text-lg font-bold text-white mb-2">持續擴充</h4>
+                <p className="text-slate-400 text-sm">退貨管理、盤點調整...系統隨公司成長。</p>
+                <div className="mt-4 text-2xl font-bold text-white">24h</div>
+                <div className="text-xs text-slate-500">即時支援</div>
+              </div>
+            </div>
 
             <div className="mt-20 pt-10 border-t border-white/10">
               <p className="text-slate-500">© 2026 Toyflow Inc. All rights reserved. 玩庫ERP</p>
