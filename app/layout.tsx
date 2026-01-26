@@ -23,6 +23,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "玩庫ERP | 專為玩具店量身打造",
   description: "簡單易用、功能完整的玩具店專用ERP系統。POS收銀、進銷存、財務管理一次搞定。",
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
+  },
 };
 
 export default function RootLayout({
