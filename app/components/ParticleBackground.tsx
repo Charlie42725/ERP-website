@@ -38,6 +38,9 @@ export default function ParticleBackground() {
         };
 
         const initParticles = () => {
+            const isMobile = window.innerWidth < 768;
+            const particleCount = isMobile ? 35 : 80; // Responsive density
+
             particles = [];
             for (let i = 0; i < particleCount; i++) {
                 particles.push({
@@ -46,8 +49,8 @@ export default function ParticleBackground() {
                     vx: (Math.random() - 0.5) * 0.05, // Ultra slow drift
                     vy: (Math.random() - 0.5) * 0.05,
                     size: Math.random() * 4 + 2, // 2px - 6px
-                    alpha: Math.random() * 0.5 + 0.1, // 0.1 - 0.6 start
-                    targetAlpha: Math.random() * 0.5 + 0.1,
+                    alpha: Math.random() * 0.3 + 0.05, // 0.05 - 0.35 (Lighter)
+                    targetAlpha: Math.random() * 0.3 + 0.05,
                 });
             }
         };
@@ -71,7 +74,7 @@ export default function ParticleBackground() {
                     const dist = Math.sqrt(dx * dx + dy * dy);
 
                     if (dist < connectionDistance) {
-                        const opacity = (1 - dist / connectionDistance) * 0.3; // Max 0.3 opacity
+                        const opacity = (1 - dist / connectionDistance) * 0.15; // Max 0.15 opacity (Subtle connections)
                         ctx.beginPath();
                         ctx.strokeStyle = `rgba(34, 211, 238, ${opacity})`; // Cyan lines
                         ctx.moveTo(p.x, p.y);
@@ -107,7 +110,7 @@ export default function ParticleBackground() {
 
                 // 4. Alpha Breathing (Twinkle)
                 if (Math.random() < 0.05) {
-                    p.targetAlpha = Math.random() * 0.5 + 0.1;
+                    p.targetAlpha = Math.random() * 0.3 + 0.05;
                 }
                 p.alpha += (p.targetAlpha - p.alpha) * 0.05;
 
