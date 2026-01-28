@@ -14,8 +14,6 @@ interface Particle {
 
 export default function ParticleBackground() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
-    const mouseRef = useRef({ x: -1000, y: -1000 });
-
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas) return;
@@ -29,7 +27,6 @@ export default function ParticleBackground() {
         // Configuration matching user specs
         const particleCount = 80; // Denser but manageable
         const connectionDistance = 180; // Connection range
-        const mouseRadius = 250;
 
         const resize = () => {
             canvas.width = window.innerWidth;
@@ -96,19 +93,7 @@ export default function ParticleBackground() {
                 if (p.y < -50) p.y = canvas.height + 50;
                 if (p.y > canvas.height + 50) p.y = -50;
 
-                // 3. Mouse Interaction: "Gather/Attract" + Slight Turbulence
-                const dx = mouseRef.current.x - p.x;
-                const dy = mouseRef.current.y - p.y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-
-                if (distance < mouseRadius) {
-                    const force = (mouseRadius - distance) / mouseRadius; // 0 to 1
-                    // Gentle Attraction
-                    p.x += (dx / distance) * force * 0.8;
-                    p.y += (dy / distance) * force * 0.8;
-                }
-
-                // 4. Alpha Breathing (Twinkle)
+                // 3. Alpha Breathing (Twinkle)
                 if (Math.random() < 0.05) {
                     p.targetAlpha = Math.random() * 0.3 + 0.05;
                 }
@@ -131,25 +116,13 @@ export default function ParticleBackground() {
             animationFrameId = requestAnimationFrame(draw);
         };
 
-        const handleMouseMove = (e: MouseEvent) => {
-            mouseRef.current = { x: e.clientX, y: e.clientY };
-        };
-
-        const handleMouseLeave = () => {
-            mouseRef.current = { x: -1000, y: -1000 };
-        }
-
         window.addEventListener("resize", resize);
-        window.addEventListener("mousemove", handleMouseMove);
-        document.addEventListener("mouseleave", handleMouseLeave);
 
         resize();
         draw();
 
         return () => {
             window.removeEventListener("resize", resize);
-            window.removeEventListener("mousemove", handleMouseMove);
-            document.removeEventListener("mouseleave", handleMouseLeave);
             cancelAnimationFrame(animationFrameId);
         };
     }, []);

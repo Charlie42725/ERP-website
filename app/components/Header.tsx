@@ -37,6 +37,7 @@ export default function Header() {
                         <Link href="/consult" className="hover:text-cyan-400 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.8)] transition-all">試用及諮詢</Link>
                         <Link href="/pricing" className="hover:text-cyan-400 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.8)] transition-all">價格方案</Link>
                         <Link href="/services" className="hover:text-cyan-400 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.8)] transition-all">提供服務</Link>
+                        <Link href="/faq" className="hover:text-cyan-400 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.8)] transition-all">常見問題</Link>
                         <Link href="#" className="hover:text-cyan-400 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.8)] transition-all">關於我們</Link>
                     </nav>
                 </div>
@@ -66,6 +67,7 @@ export default function Header() {
                         <Link href="/consult" className="py-2 border-b border-white/5 hover:text-cyan-400" onClick={() => setIsMobileMenuOpen(false)}>試用及諮詢</Link>
                         <Link href="/pricing" className="py-2 border-b border-white/5 hover:text-cyan-400" onClick={() => setIsMobileMenuOpen(false)}>價格方案</Link>
                         <Link href="/services" className="py-2 border-b border-white/5 hover:text-cyan-400" onClick={() => setIsMobileMenuOpen(false)}>提供服務</Link>
+                        <Link href="/faq" className="py-2 border-b border-white/5 hover:text-cyan-400" onClick={() => setIsMobileMenuOpen(false)}>常見問題</Link>
                         <Link href="#" className="py-2 border-b border-white/5 hover:text-cyan-400" onClick={() => setIsMobileMenuOpen(false)}>關於我們</Link>
                     </nav>
                     <div className="flex flex-col gap-4 mt-auto">

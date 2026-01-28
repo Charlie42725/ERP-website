@@ -215,11 +215,11 @@ export default function Home() {
 
               <h1 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight tracking-tight min-h-[160px] md:min-h-[auto]">
                 <span className="text-glow-blue">
-                  <Typewriter text="告別庫存混亂" speed={150} />
+                  <Typewriter text="7天終結" speed={150} />
                 </span>
                 <br className="block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 text-glow-magenta">
-                  <Typewriter text="隨時掌控生意" speed={150} startDelay={1500} />
+                  <Typewriter text="Excel亂帳問題" speed={150} startDelay={1500} />
                 </span>
               </h1>
 
@@ -291,7 +291,7 @@ export default function Home() {
                     ))}
                   </ul>
                   <div className="mt-8 p-4 border-l-4 border-cyan-500 bg-cyan-500/5">
-                    <p className="text-cyan-200">💡 重點：只要做「收銀」和「進貨」兩個動作，庫存和財務報表系統會自己幫我們算好。</p>
+                    <p className="text-cyan-200">💡 重點：</p>
                   </div>
                 </div>
                 <div className="relative h-[500px] w-full rounded-2xl border border-white/10 bg-[#15151a] shadow-2xl flex items-center justify-center overflow-hidden group">
@@ -311,68 +311,157 @@ export default function Home() {
 
 
 
-        {/* --- New Section: Why Choose Toyflow (Carousel) --- */}
-        < section className="py-12 relative overflow-hidden" >
-          {/* Background Effects */}
-          {/* <div className="absolute inset-0 bg-[#05050a]"></div> Removed for transparency */}
-          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/20 blur-[150px] rounded-full mix-blend-screen animate-pulse-slow"></div>
-          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-600/20 blur-[150px] rounded-full mix-blend-screen animate-pulse-slow delay-1000"></div>
-
-          <div className="relative z-10 text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-6 tracking-tight">
-              為什麼有那麼多企業<br />選擇 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">玩庫</span> 呢？
-            </h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto rounded-full shadow-[0_0_20px_rgba(34,211,238,0.5)]"></div>
-          </div>
-
-          {/* CSS Marquee Implementation */}
-          <div className="relative w-full flex overflow-x-hidden group py-6">
-            {/* Gradient Masks */}
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#05050a] to-transparent z-20 pointer-events-none"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#05050a] to-transparent z-20 pointer-events-none"></div>
-
-            <div className="animate-marquee flex gap-3 md:gap-6 whitespace-nowrap hover:[animation-play-state:paused] px-4">
+        {/* --- Statistics Section --- */}
+        <section className="py-16 relative overflow-hidden">
+          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/20 blur-[150px] rounded-full mix-blend-screen"></div>
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
               {[
-                { title: "100%全雲端", icon: Cloud, desc: "隨時隨地，即時同步" },
-                { title: "使用人數無上限", icon: Users, desc: "團隊擴張，費用不變" },
-                { title: "免費附加服務", icon: Gift, desc: "超多功能，無需加價" },
-                { title: "免費更新升級", icon: RefreshCw, desc: "永遠使用最新版本" },
-                { title: "完美的後援服務", icon: Phone, desc: "專業顧問，即時支援" },
-                { title: "100%全雲端", icon: Cloud, desc: "隨時隨地，即時同步" },
-                { title: "使用人數無上限", icon: Users, desc: "團隊擴張，費用不變" },
-                { title: "免費附加服務", icon: Gift, desc: "超多功能，無需加價" },
-                { title: "免費更新升級", icon: RefreshCw, desc: "永遠使用最新版本" },
-                { title: "完美的後援服務", icon: Phone, desc: "專業顧問，即時支援" },
-              ].map((item, idx) => (
-                <div key={idx} className="group/card relative w-[160px] h-[140px] md:w-[240px] md:h-[160px] shrink-0 rounded-2xl bg-white/5 border border-white/10 overflow-hidden backdrop-blur-md transition-all duration-500 hover:scale-105 hover:bg-white/10 hover:border-cyan-500/30 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]">
-                  {/* Card Glow Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
-
-                  <div className="absolute top-0 right-0 p-4 opacity-20 group-hover/card:opacity-100 transition-opacity transform group-hover/card:rotate-12 duration-500">
-                    <item.icon className="text-white fill-white/5 w-10 h-10 md:w-16 md:h-16" />
-                  </div>
-
-                  <div className="relative z-10 h-full flex flex-col justify-center p-4 md:p-6">
-                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center mb-3 shadow-lg shadow-blue-500/30 group-hover/card:scale-110 transition-transform duration-300">
-                      <item.icon className="text-white w-4 h-4 md:w-5 md:h-5" />
+                { value: "50+", label: "玩具店正在使用" },
+                { value: "7 天", label: "平均上手時間" },
+                { value: "80%", label: "錯帳率降低" },
+                { value: "10 小時", label: "每週節省時間" },
+              ].map((stat, idx) => (
+                <ScrollAnimation key={idx} delay={idx * 100}>
+                  <div className="text-center">
+                    <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-2">
+                      {stat.value}
                     </div>
-                    <h3 className="text-sm md:text-lg font-bold text-white mb-1">{item.title}</h3>
-                    <p className="text-slate-400 text-[10px] md:text-xs font-medium">{item.desc}</p>
+                    <div className="text-slate-400 text-sm md:text-base">{stat.label}</div>
                   </div>
-                </div>
+                </ScrollAnimation>
               ))}
             </div>
           </div>
-          <style jsx>{`
-                @keyframes marquee {
-                    0% { transform: translateX(0); }
-                    100% { transform: translateX(-50%); }
-                }
-                .animate-marquee {
-                    animation: marquee 40s linear infinite;
-                }
-            `}</style>
-        </section >
+        </section>
+
+        {/* --- Simple Workflow Section --- */}
+        <section className="py-24 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/5 to-transparent"></div>
+          <ScrollAnimation>
+            <div className="max-w-5xl mx-auto px-6 relative z-10">
+              <div className="text-center mb-16">
+                <span className="text-cyan-400 text-sm font-bold tracking-wider mb-4 block">超簡單流程</span>
+                <h2 className="text-3xl md:text-5xl font-black text-white mb-6">
+                  只要做兩件事，其他系統幫你算
+                </h2>
+                <p className="text-slate-400 text-lg">不需要懂會計、不需要懂進銷存</p>
+              </div>
+
+              <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 mb-12">
+                {/* Step 1: 收銀 */}
+                <ScrollAnimation delay={100}>
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-24 h-24 md:w-28 md:h-28 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-500 flex items-center justify-center mb-4 shadow-lg shadow-blue-500/30">
+                      <CreditCard className="text-white w-12 h-12 md:w-14 md:h-14" />
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-2">收銀</h3>
+                    <p className="text-slate-400 text-sm">掃碼、收錢、完成</p>
+                  </div>
+                </ScrollAnimation>
+
+                {/* Arrow 1 */}
+                <div className="hidden md:block text-slate-600 text-2xl">→</div>
+                <div className="md:hidden text-slate-600 text-2xl rotate-90">→</div>
+
+                {/* Step 2: 進貨 */}
+                <ScrollAnimation delay={200}>
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-24 h-24 md:w-28 md:h-28 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-500 flex items-center justify-center mb-4 shadow-lg shadow-blue-500/30">
+                      <Box className="text-white w-12 h-12 md:w-14 md:h-14" />
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-2">進貨</h3>
+                    <p className="text-slate-400 text-sm">輸入數量、價格</p>
+                  </div>
+                </ScrollAnimation>
+
+                {/* Arrow 2 */}
+                <div className="hidden md:block text-slate-600 text-2xl">→</div>
+                <div className="md:hidden text-slate-600 text-2xl rotate-90">→</div>
+
+                {/* Step 3: 自動完成 */}
+                <ScrollAnimation delay={300}>
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-24 h-24 md:w-28 md:h-28 rounded-2xl bg-gradient-to-br from-green-600 to-green-500 flex items-center justify-center mb-4 shadow-lg shadow-green-500/30">
+                      <Zap className="text-white w-12 h-12 md:w-14 md:h-14" />
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-2">自動完成</h3>
+                    <p className="text-slate-400 text-sm">庫存、成本、帳款、報表</p>
+                  </div>
+                </ScrollAnimation>
+              </div>
+
+              {/* Highlight Box */}
+              <div className="max-w-2xl mx-auto">
+                <div className="p-4 md:p-6 rounded-xl bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-center">
+                  <p className="text-cyan-300 font-bold text-base md:text-lg">
+                    重點：只要做「收銀」和「進貨」，系統會自動幫你算好庫存和報表
+                  </p>
+                </div>
+              </div>
+            </div>
+          </ScrollAnimation>
+        </section>
+
+        {/* --- Testimonials Section --- */}
+        <section className="py-24 relative overflow-hidden">
+          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-blue-900/10 blur-[150px] rounded-full"></div>
+          <ScrollAnimation>
+            <div className="max-w-6xl mx-auto px-6 relative z-10">
+              <div className="text-center mb-16">
+                <span className="text-cyan-400 text-sm font-bold tracking-wider mb-4 block">客戶見證</span>
+                <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
+                  聽聽其他老闆怎麼說
+                </h2>
+                <p className="text-slate-400">他們都已經從 Excel 轉移到玩庫 ERP</p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6">
+                {[
+                  {
+                    quote: "以前每天花 2 小時對帳，現在打開系統就知道今天賺多少。",
+                    name: "王老闆",
+                    company: "台北某玩具店",
+                    initial: "王"
+                  },
+                  {
+                    quote: "最怕客人問還有沒有貨，現在 3 秒就能回答。",
+                    name: "林老闆",
+                    company: "高雄某模型店",
+                    initial: "林"
+                  },
+                  {
+                    quote: "本來很怕用電腦系統，結果比 Excel 還簡單。",
+                    name: "陳老闆",
+                    company: "台中某公仔店",
+                    initial: "陳"
+                  }
+                ].map((testimonial, idx) => (
+                  <ScrollAnimation key={idx} delay={idx * 150}>
+                    <div className="relative p-6 md:p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md hover:border-cyan-500/30 transition-all duration-300 h-full">
+                      {/* Quote Mark */}
+                      <div className="absolute top-4 right-4 text-6xl text-cyan-500/20 font-serif leading-none">"</div>
+
+                      <p className="text-white text-base md:text-lg mb-6 relative z-10 leading-relaxed">
+                        「{testimonial.quote}」
+                      </p>
+
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-white font-bold text-sm">
+                          {testimonial.initial}
+                        </div>
+                        <div>
+                          <div className="text-white font-bold">{testimonial.name}</div>
+                          <div className="text-slate-400 text-sm">{testimonial.company}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </ScrollAnimation>
+                ))}
+              </div>
+            </div>
+          </ScrollAnimation>
+        </section>
 
         {/* --- New Section: Pricing Banner (Tech Style) --- */}
         < section className="py-12 relative overflow-hidden" >
@@ -383,28 +472,25 @@ export default function Home() {
           </div >
 
           <div className="max-w-3xl mx-auto px-6 relative z-10">
-            <div className="relative rounded-[2rem] p-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 shadow-[0_0_40px_rgba(59,130,246,0.2)]">
-              <div className="absolute inset-0 bg-white/50 blur-xl opacity-20 animate-pulse"></div>
+            <div className="relative rounded-[2rem] p-[2px] bg-gradient-to-b from-white/20 to-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.4),0_0_80px_rgba(59,130,246,0.15)]">
 
-              <div className="relative rounded-[1.8rem] bg-black/60 backdrop-blur-xl overflow-hidden px-6 py-10 md:px-12 md:py-12 text-center">
-                {/* Inner Glow */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-20 bg-blue-500/20 blur-[60px] rounded-full pointer-events-none"></div>
+              <div className="relative rounded-[1.9rem] bg-slate-900/95 backdrop-blur-xl overflow-hidden px-6 py-10 md:px-12 md:py-12 text-center shadow-inner">
 
-                <h2 className="text-xl md:text-2xl font-bold text-cyan-400 mb-2 tracking-wider font-sans">
+                <h2 className="text-xl md:text-2xl font-bold text-blue-400 mb-2 tracking-wider font-sans">
                   零售店專用 ERP 管理平台
                 </h2>
-                <div className="text-white font-bold text-lg mb-6">
+                <div className="text-slate-300 font-medium text-lg mb-6">
                   比 Excel 快 10 倍，錯帳率降低 80%
                 </div>
 
                 <div className="flex flex-col items-center justify-center gap-1 mb-6">
                   <div className="flex items-baseline gap-2 text-white font-bold mb-2">
                     <span className="text-2xl md:text-3xl">每月</span>
-                    <span className="text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-400 to-red-400 leading-none tracking-tighter drop-shadow-[0_0_15px_rgba(251,146,60,0.5)]">
+                    <span className="text-6xl md:text-7xl font-black text-white leading-none tracking-tighter">
                       1,500
                     </span>
                   </div>
-                  <div className="text-cyan-300 font-bold text-lg tracking-wider">
+                  <div className="text-blue-300 font-medium text-lg">
                     每天只要 50 元
                   </div>
                 </div>
@@ -441,39 +527,14 @@ export default function Home() {
           </div>
         </section >
 
-        {/* --- 6. Low Risk / Footer --- */}
-        < section className="py-24 text-center" >
+        {/* --- Footer --- */}
+        <section className="py-12 text-center">
           <div className="max-w-4xl mx-auto px-6">
-            <h2 className="text-3xl font-bold text-white mb-12">成本與維護 (Low Risk)</h2>
-            <div className="grid md:grid-cols-3 gap-8 text-left mb-16">
-              <div className="p-6">
-                <Cloud className="text-cyan-400 mb-4 h-8 w-8" />
-                <h4 className="text-lg font-bold text-white mb-2">雲端部署</h4>
-                <p className="text-slate-400 text-sm">資料即時同步，不需架設伺服器，不怕電腦壞掉。</p>
-                <div className="mt-4 text-2xl font-bold text-white">100%</div>
-                <div className="text-xs text-slate-500">雲端部屬</div>
-              </div>
-              <div className="p-6">
-                <Settings className="text-cyan-400 mb-4 h-8 w-8" />
-                <h4 className="text-lg font-bold text-white mb-2">無需 IT 人員</h4>
-                <p className="text-slate-400 text-sm">系統穩定，買的是服務，不用養工程師。</p>
-                <div className="mt-4 text-2xl font-bold text-white">0元</div>
-                <div className="text-xs text-slate-500">維護成本</div>
-              </div>
-              <div className="p-6">
-                <TrendingUp className="text-cyan-400 mb-4 h-8 w-8" />
-                <h4 className="text-lg font-bold text-white mb-2">持續擴充</h4>
-                <p className="text-slate-400 text-sm">退貨管理、盤點調整...系統隨公司成長。</p>
-                <div className="mt-4 text-2xl font-bold text-white">24h</div>
-                <div className="text-xs text-slate-500">即時支援</div>
-              </div>
-            </div>
-
-            <div className="mt-20 pt-10 border-t border-white/10">
+            <div className="pt-10 border-t border-white/10">
               <p className="text-slate-500">© 2026 Toyflow Inc. All rights reserved. 玩庫ERP</p>
             </div>
           </div>
-        </section >
+        </section>
 
       </main >
     </div >
