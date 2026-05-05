@@ -291,15 +291,17 @@ export default function Home() {
                     ))}
                   </ul>
                   <div className="mt-8 p-4 border-l-4 border-cyan-500 bg-cyan-500/5">
-                    <p className="text-cyan-200">💡 重點：</p>
+                    <p className="text-cyan-200 font-semibold">💡 重點：不需要導入顧問，7 天內自己上線，系統全中文介面，邊用邊學。</p>
                   </div>
                 </div>
-                <div className="relative h-[500px] w-full rounded-2xl border border-white/10 bg-[#15151a] shadow-2xl flex items-center justify-center overflow-hidden group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
-                  <div className="text-center group-hover:scale-110 transition-transform duration-700">
-                    <LayoutGrid size={64} className="text-slate-600 mx-auto mb-4 group-hover:text-cyan-400 transition-colors" />
-                    <p className="text-slate-500 font-mono text-sm">SYSTEM INTERFACE PREVIEW</p>
-                  </div>
+                <div className="relative h-[500px] w-full rounded-2xl border border-white/10 bg-[#15151a] shadow-2xl overflow-hidden group">
+                  <Image
+                    src="/demo.png"
+                    alt="ToyFlow ERP Interface"
+                    fill
+                    className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f1115] via-transparent to-transparent opacity-60"></div>
                 </div>
               </div>
             </div>
@@ -463,69 +465,104 @@ export default function Home() {
           </ScrollAnimation>
         </section>
 
-        {/* --- New Section: Pricing Banner (Tech Style) --- */}
-        < section className="py-12 relative overflow-hidden" >
-          {/* Dynamic Background */}
-          < div className="absolute inset-0" >
+        {/* --- Pricing Section --- */}
+        <section className="py-20 relative overflow-hidden">
+          <div className="absolute inset-0">
             <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20 [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]"></div>
             <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-transparent to-cyan-900/20"></div>
-          </div >
+          </div>
 
-          <div className="max-w-3xl mx-auto px-6 relative z-10">
-            <div className="relative rounded-[2rem] p-[2px] bg-gradient-to-b from-white/20 to-white/5 shadow-[0_8px_32px_rgba(0,0,0,0.4),0_0_80px_rgba(59,130,246,0.15)]">
+          <ScrollAnimation>
+            <div className="max-w-5xl mx-auto px-6 relative z-10">
+              <div className="text-center mb-12">
+                <span className="text-cyan-400 text-sm font-bold tracking-wider mb-4 block">定價方案</span>
+                <h2 className="text-3xl md:text-5xl font-black text-white mb-4">簡單透明，隨時升級</h2>
+                <p className="text-slate-400 text-lg">不綁約，免設定費，7 天內完成導入上線</p>
+              </div>
 
-              <div className="relative rounded-[1.9rem] bg-slate-900/95 backdrop-blur-xl overflow-hidden px-6 py-10 md:px-12 md:py-12 text-center shadow-inner">
-
-                <h2 className="text-xl md:text-2xl font-bold text-blue-400 mb-2 tracking-wider font-sans">
-                  零售店專用 ERP 管理平台
-                </h2>
-                <div className="text-slate-300 font-medium text-lg mb-6">
-                  比 Excel 快 10 倍，錯帳率降低 80%
-                </div>
-
-                <div className="flex flex-col items-center justify-center gap-1 mb-6">
-                  <div className="flex items-baseline gap-2 text-white font-bold mb-2">
-                    <span className="text-2xl md:text-3xl">每月</span>
-                    <span className="text-6xl md:text-7xl font-black text-white leading-none tracking-tighter">
-                      1,500
-                    </span>
+              <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                {/* Monthly Plan */}
+                <div className="relative rounded-2xl bg-slate-900/90 border border-white/10 backdrop-blur-xl p-8 flex flex-col hover:border-blue-500/40 transition-all duration-300">
+                  <div className="mb-6">
+                    <h3 className="text-lg font-bold text-slate-300 mb-1">月繳方案</h3>
+                    <div className="flex items-baseline gap-2 mt-3">
+                      <span className="text-5xl font-black text-white">2,000</span>
+                      <span className="text-slate-400">元 / 月</span>
+                    </div>
+                    <p className="text-slate-500 text-sm mt-2">每天只要 67 元</p>
                   </div>
-                  <div className="text-blue-300 font-medium text-lg">
-                    每天只要 50 元
-                  </div>
-                </div>
 
-                <div className="flex flex-col gap-3 mb-10 text-left max-w-sm mx-auto">
-                  <div className="flex items-center gap-3 text-white font-bold">
-                    <CheckCircle2 className="text-green-400 shrink-0" size={20} />
-                    <span>7 天內完成導入上線</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-white font-bold">
-                    <CheckCircle2 className="text-green-400 shrink-0" size={20} />
-                    <span>3 秒看懂毛利 / 庫存 / 熱賣</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-white font-bold">
-                    <CheckCircle2 className="text-green-400 shrink-0" size={20} />
-                    <span>一句提問查帳：AI 助手幫你查</span>
-                  </div>
-                </div>
+                  <ul className="space-y-3 mb-8 flex-1">
+                    {[
+                      "POS 收銀 + 進銷存 + 財務",
+                      "AI 助手隨問隨答",
+                      "7 天導入支援",
+                      "手機 / 平板 / 電腦全裝置",
+                    ].map((f, i) => (
+                      <li key={i} className="flex items-center gap-3 text-slate-300">
+                        <CheckCircle2 className="text-cyan-400 shrink-0" size={16} />
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
 
-                <div className="flex flex-col md:flex-row justify-center gap-6">
                   <Link
                     href="/contact"
-                    className="group relative px-10 py-4 rounded-full overflow-hidden bg-white text-black font-bold text-lg shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:scale-105 transition-all duration-300"
+                    className="block text-center py-3 rounded-xl border border-white/20 text-white font-bold hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-300"
                   >
-                    <span className="relative z-10 flex items-center gap-2">
-                      立即免費試用 <ChevronRight size={18} className="transition-transform group-hover:translate-x-1" />
+                    立即開始
+                  </Link>
+                </div>
+
+                {/* Annual Plan */}
+                <div className="relative rounded-2xl bg-gradient-to-b from-blue-900/60 to-slate-900/90 border border-blue-500/40 backdrop-blur-xl p-8 flex flex-col shadow-[0_0_40px_rgba(59,130,246,0.2)]">
+                  {/* Badge */}
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xs font-black tracking-wider whitespace-nowrap">
+                    省 4,000 元 · 推薦
+                  </div>
+
+                  <div className="mb-6">
+                    <h3 className="text-lg font-bold text-cyan-300 mb-1">年繳方案</h3>
+                    <div className="flex items-baseline gap-2 mt-3">
+                      <span className="text-5xl font-black text-white">20,000</span>
+                      <span className="text-slate-400">元 / 年</span>
+                    </div>
+                    <p className="text-cyan-400 text-sm mt-2 font-medium">月均僅 1,667 元・每天只要 55 元</p>
+                  </div>
+
+                  <ul className="space-y-3 mb-8 flex-1">
+                    {[
+                      "月繳方案所有功能",
+                      "優先技術支援回應",
+                      "免費新功能搶先用",
+                      "年繳一次，輕鬆省 4,000",
+                    ].map((f, i) => (
+                      <li key={i} className="flex items-center gap-3 text-slate-200">
+                        <CheckCircle2 className="text-green-400 shrink-0" size={16} />
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link
+                    href="/contact"
+                    className="group relative block text-center py-3 rounded-xl overflow-hidden bg-white text-black font-bold hover:scale-[1.02] transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+                  >
+                    <span className="relative z-10 flex items-center justify-center gap-2">
+                      立即免費試用 <ChevronRight size={16} className="transition-transform group-hover:translate-x-1" />
                     </span>
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-200 to-blue-200 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </Link>
-
                 </div>
               </div>
+
+              {/* Bottom note */}
+              <p className="text-center text-slate-500 text-sm mt-8">
+                所有方案皆含免費 14 天試用 · 不滿意全額退款
+              </p>
             </div>
-          </div>
-        </section >
+          </ScrollAnimation>
+        </section>
 
         {/* --- Footer --- */}
         <section className="py-12 text-center">
